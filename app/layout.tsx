@@ -1,6 +1,5 @@
 import { Providers } from '@/lib/providers';
 import { Toaster } from 'react-hot-toast';
-import Header from '@/components/Header';
 
 import classes from './rootLayout.module.css';
 import '@/styles/index.css';
@@ -10,8 +9,6 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     <Providers>
       <html lang="en">
         <body>
-          <Header />
-
           <main className={classes.main}>{children}</main>
 
           <Toaster
