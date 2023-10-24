@@ -21,10 +21,10 @@ import { useDispatch } from '@/lib/redux';
 import './styles.css';
 import StatusPanel from './components/StatusPanel';
 import { RequestResponseError } from '@/types/common.type';
+import Pagination from '../Pagination';
 
 const FetchError = dynamic(() => import('../FetchError'), { ssr: false });
 const EmptyState = dynamic(() => import('../EmptyState'), { ssr: false });
-const Pagination = dynamic(() => import('../Pagination'), { ssr: false });
 
 const notifyError = () => toast.error('Something went wrong');
 
