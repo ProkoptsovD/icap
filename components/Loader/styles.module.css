@@ -1,0 +1,69 @@
+.wrapper {
+  --color-bg: white;
+  --spinner-size: 5rem;
+  --spinner-color: mediumvioletred;
+  --spinner-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0000009d;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.loader {
+  block-size: var(--spinner-size);
+  inline-size: var(--spinner-size);
+  position: relative;
+  border: 1rem solid transparent;
+  border-radius: 50%;
+  box-shadow: var(--spinner-shadow), 0 0 0 1px var(--spinner-color) inset;
+  animation: rotate-shadow 2000ms linear infinite;
+  background-color: #808080;
+  pointer-events: none;
+}
+.loader::after {
+  content: '';
+  display: block;
+  block-size: 0.6rem;
+  inline-size: 0.6rem;
+  position: absolute;
+  inset-block-start: 0.2rem;
+  inset-inline-start: 0.2rem;
+  border-radius: 50% 0% 50% 0;
+  background-color: var(--spinner-color);
+  transform-origin: 1.3rem 1.3rem;
+  animation: rotate 2000ms -200ms linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-shadow {
+  0%,
+  100% {
+    box-shadow: var(--spinner-shadow), 0 0 0 1px var(--spinner-color) inset,
+      1px 1px 0 1px var(--spinner-color) inset;
+  }
+  25% {
+    box-shadow: var(--spinner-shadow), 0 0 0 1px var(--spinner-color) inset,
+      -1px 1px 0 1px var(--spinner-color) inset;
+  }
+  50% {
+    box-shadow: var(--spinner-shadow), 0 0 0 1px var(--spinner-color) inset,
+      -1px -1px 0 1px var(--spinner-color) inset;
+  }
+  75% {
+    box-shadow: var(--spinner-shadow), 0 0 0 1px var(--spinner-color) inset,
+      1px -1px 0 1px var(--spinner-color) inset;
+  }
+}

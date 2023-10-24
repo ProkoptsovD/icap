@@ -1,0 +1,98 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: #eeeeee;
+  background-color: #222831;
+  max-width: 550px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.75);
+}
+.wrapper h2 {
+  margin: 35px 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.wrapper .footer {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  width: 100%;
+  height: 100px;
+  background-color: #393e46;
+  clip-path: polygon(63% 68%, 100% 25%, 100% 100%, 0 100%, 0 0);
+}
+
+.group {
+  --_padding-block: 35px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 60px;
+  padding: 0 var(--_padding-block);
+  position: relative;
+}
+
+.group .label {
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  margin-top: -25px;
+}
+.group .input {
+  width: 350px;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px white;
+  color: #ffffff;
+  outline: none;
+  height: 25px;
+  border-radius: 4px;
+  padding: 16px 0px;
+}
+
+.btn {
+  color: #eeeeee;
+  background-color: transparent;
+  outline: none;
+  padding: 3px;
+  padding-bottom: 0;
+  margin: 35px 0;
+  border: none;
+  border-bottom: solid 1px white;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+.btn:hover {
+  color: #bbe1fa;
+  border-bottom: solid 1px #bbe1fa;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -ms-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+
+  cursor: pointer;
+}
+
+.noEvents {
+  pointer-events: none;
+}
+
+.error {
+  position: absolute;
+  top: 110%;
+  left: var(--_padding-block);
+  color: rgb(235, 79, 79);
+  font-size: 0.85rem;
+}

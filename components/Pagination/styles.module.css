@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: inherit;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.paginateButtonsList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.paginationButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--clr-dark-400);
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--clr-dark-100);
+  background-color: var(--clr-light-100);
+  transition: transform 0.15s ease;
+
+  cursor: pointer;
+}
+
+.paginationButton.selected {
+  color: var(--clr-light-100);
+  background-color: var(--clr-dark-400);
+}
+
+.prevNextBtn {
+  font-weight: 700;
+  font-size: 1rem;
+  max-width: 4rem;
+  width: 100%;
+
+  border-radius: 1rem;
+}
+
+.prevNextBtn:disabled {
+  color: #8d8d8d;
+  border-color: #8d8d8d;
+  cursor: initial;
+}
+
+.prevNextBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.paginationButton:not(:disabled):hover {
+  transform: scale(1.05);
+}
